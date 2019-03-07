@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+                <h1>Intrusion Detection in self driving cars by using Blockchain technology</h1>
+        </div>
+        <div class="main">
+            <div class="operations">
+            <h3>Click the button below to add a new car to the road</h3>
+            <button id="add_car" onclick="addcar()">Add car</button>
+            <div id="attackdiv" class="datas hide">
+                <h4 class="label">To attack the Blockchain, click on car to attack and change its respective data</h4>
+                
+                <div>Car Selected:</div>
+                <div class="cardata">
+                    <div class="data-block"><span>Speed Limit</span><input type="text"></div>
+                    <div class="data-block"><span>Braking distance</span><input type="text"></div>
+                    <div class="data-block"><span>Steering Angle</span><input type="text"></div>
+                </div>
+
+            </div>
+            </div>
+            <div id="res" class="result">
+               <div id="holdercont" class="holder">
+               </div>
+               <div>
+               <h1 id="chain-label" class="chain-lab hide">chain</h1>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

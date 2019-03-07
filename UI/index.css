@@ -1,0 +1,105 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: unset;
+    margin: unset;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.header{
+    width: 100%;
+    height: 10%;
+}
+
+.main{
+    border: 1px solid black;
+    width: 100%;
+    height: 86%;
+}
+body{
+    margin: unset;
+    padding: unset;
+}
+.operations{
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+    box-sizing: border-box;
+}
+span{
+    margin-right: 20px;
+}
+.label{
+    margin: 20px;
+}
+.cardata{
+    background-color: #efefef;
+}
+.data-block{
+    margin:10px;
+}
+
+.result{
+    width: 68%;
+    height: 100%;
+    border: 1px solid greenyellow;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    
+}
+.caricon, connecticon{
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+}
+.connecticon{
+    -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari 3-8 */
+  transform: rotate(90deg);
+}
+.datas{
+
+}
+.hide{
+    display: none;
+}
+.newlab{
+    margin: 20px;
+}
+#add_car{
+    height: 40px;
+    width: 300px;
+    margin-left: 40px;
+    background-color:#84DD2C;
+    border: none;
+    font-size: 18px;
+    outline: unset;
+}
+.cardiv{
+    width: 47%;
+    height: 20%;
+    display:inline-block;
+    margin-left: 20px;
+}
+.cardiv:hover{
+
+}
+#add_car:hover{
+    background-color: #75C426;
+}
+.borderme{
+    border: 5px solid #F9C81F;
+    border-style: dashed;
+}
+.holder{
+    overflow: auto;
+}
+
+.chain-lab{
+    text-align: center;
+}
