@@ -49,13 +49,16 @@ async function addCarToChain(id){
                 "id":id
             }
         )
+    }).then(res=>{
+       // let jsonobj = JSON.parse(res);
+       // console.log(jsonobj["chain"]);
+       console.log(res.json());
     });
-    let result=await newCarRequest.json();
-    if (result.err) {
-         console.log('error');
-    }
-    else { 
-        console.log('fetched response');
-    }
+    // if (result.err) {
+    //      console.log('error');
+    // }
+    // else { 
+    //     console.log(result);
+    // }
 }
 

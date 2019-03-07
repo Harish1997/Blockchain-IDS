@@ -26,7 +26,7 @@ app.post('/car/join',(req,res)=>{
     console.log("The car id is "+req.body);
     res.setHeader('Content-Type','application/json');
     if(active_connections===0){
-        res.send(JSON.stringify({result:"No active connections - New car with id "+car_id+" has entered the system"}));
+        res.send(JSON.stringify({"result":"No active connections - New car with id "+car_id+" has entered the system"}));
         car_ids.push(car_id);
         console.log(car_ids);
         active_connections=active_connections+1;
@@ -35,14 +35,14 @@ app.post('/car/join',(req,res)=>{
     }
     else if(active_connections===1){
         car_ids.push(car_id)
-        res.send(JSON.stringify({result:"Car connect process - Entering Handshake for "+car_id+" with existing car having id "+car_ids[0]}));
+        res.send(JSON.stringify({"result":"Car connect process - Entering Handshake for "+car_id+" with existing car having id "+car_ids[0],"chain":JSON.stringify(blocks,null,4)}));
         console.log(car_ids);
         active_connections=active_connections+1;
         blocks.addBlock(new chainItems.Block(car_id,getDateNow(),{Speed_Limit:55,Braking_distance:10,Steering_Angle:5}));
         logger();
     }
     else{
-        res.send("Car connect process - Entering Handshake for "+car_id+" with existing chain of cars having ids "+car_ids.toString());
+        res.send(JSON.stringify({"result":"Car connect process - Entering Handshake for "+car_id+" with existing chain of cars having ids "+car_ids.toString(),"chain":JSON.stringify(blocks,null,4)}));
         car_ids.push(car_id);
         console.log(car_ids);
         blocks.addBlock(new chainItems.Block(car_id,getDateNow(),{Speed_Limit:55,Braking_distance:10,Steering_Angle:5}));
