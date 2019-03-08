@@ -1,0 +1,37 @@
+#holdercont{
+    position: relative;
+}
+.background{
+    z-index: -200;
+    width: 850px;
+    position: absolute;
+    height: 800px;
+    overflow-x: hidden;
+}
+.image{
+    height: 800px;
+    width:  800px;
+    position: absolute;
+    z-index: -100;
+    background-image: url(./assets/road/road.jpg);
+    background-repeat: repeat;
+    background-size: auto auto;
+    /* border: 1px solid white; */
+}
+.image-1{
+    left: 0%;
+    animation: moveSlideshow 3s linear infinite;
+}
+.image-2{
+    left: 800px;
+    animation: moveSlideshow 3s linear infinite;
+}
+.image-3{
+    left: 1600px;
+    animation: moveSlideshow 3s linear infinite;
+}
+@keyframes moveSlideshow {
+    100% { 
+      transform: translateX(-66.6666%);  
+    }
+  }
