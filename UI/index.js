@@ -1,5 +1,6 @@
 var id=0;
 var cont;
+var cars={};
 function addcar(){
     cont=document.getElementById('holdercont');
 
@@ -12,6 +13,7 @@ function addcar(){
             var element=event.target;
             if(element){
                 console.log("clicked holder "+element.id);
+                console.log(cars[element.id]['data']);
             }
         });
     }else{
@@ -50,10 +52,18 @@ async function addCarToChain(id){
             }
         )
     }).then(res=>{
-       // let jsonobj = JSON.parse(res);
+       // 
        // console.log(jsonobj["chain"]);
-       console.log(res.json());
-    });
+    res.json().then(data=>{
+        let jsonobj = JSON.parse(data.chain)["chain"];
+        jsonobj.forEach(element => {
+            cars[element['index']]=element;
+        });
+        console.log(cars);
+       });
+    }
+)
+
     // if (result.err) {
     //      console.log('error');
     // }
