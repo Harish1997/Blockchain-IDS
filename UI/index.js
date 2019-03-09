@@ -1,19 +1,55 @@
 var id=0;
 var cont;
 var cars={};
+var attacked_car_id;
+var steering_angle_txt=document.getElementById("steering_angle");
+    var braking_distance_txt=document.getElementById("braking_distance");
+    var speed_limit_txt=document.getElementById("speed_limit");
+    var attackdiv= document.getElementById("attackdiv");
+    var container=document.getElementById("holdercont");
+    var clabel=document.getElementById("chain-label");
+
+    steering_angle_txt.addEventListener('keyup',(event)=>{
+        if(attacked_car_id!=null){
+            //alert("Car "+attacked_car_id+" is being attacked!");
+            clabel.innerHTML="Car "+attacked_car_id+" is being attacked! Steering Angle data is being changed! Stopping car "+attacked_car_id+" immediately";
+            steeringattackCarinChain(attacked_car_id,steering_angle_txt.value);
+        }
+    });
+
+    braking_distance_txt.addEventListener('keyup',(event)=>{
+        if(attacked_car_id!=null){
+            //alert("Car "+attacked_car_id+" is being attacked!");
+            clabel.innerHTML="Car "+attacked_car_id+" is being attacked! Braking Distance data is being changed! Stopping car "+attacked_car_id+" immediately";
+            brakingattackCarinChain(attacked_car_id,braking_distance_txt.value);
+        }
+    });
+
+    speed_limit_txt.addEventListener('keyup',(event)=>{
+        if(attacked_car_id!=null){
+            //alert("Car "+attacked_car_id+" is being attacked!");
+            clabel.innerHTML="Car "+attacked_car_id+" is being attacked! Speed limit data is being changed! Stopping car "+attacked_car_id+" immediately";
+            speedattackCarinChain(attacked_car_id,speed_limit_txt.value);
+        }
+    });
+
+
 function addcar(){
     cont=document.getElementById('holdercont');
-
-    let attackdiv= document.getElementById("attackdiv");
-    let container=document.getElementById("holdercont");
-    let clabel=document.getElementById("chain-label");
+    
     console.log("New car added, actively looking for connections");
     if(cont){
         cont.addEventListener('click',function(event){
             var element=event.target;
             if(element){
+                let car_data=cars[element.id]['data'];
                 console.log("clicked holder "+element.id);
                 console.log(cars[element.id]['data']);
+                steering_angle_txt.value=String(car_data.Steering_Angle);
+                braking_distance_txt.value=String(car_data.Braking_distance);
+                speed_limit_txt.value=String(car_data.Speed_Limit);
+                console.log(car_data.Steering_Angle);
+                attacked_car_id=element.id;
             }
         });
     }else{
@@ -61,14 +97,64 @@ async function addCarToChain(id){
         });
         console.log(cars);
        });
-    }
-)
-
-    // if (result.err) {
-    //      console.log('error');
-    // }
-    // else { 
-    //     console.log(result);
-    // }
+    });
 }
+
+
+    async function steeringattackCarinChain(id,data){
+        let url="http://localhost:8081/attack/steering/car/"+id;
+        let attackCarRequest=await fetch(url,{
+            method:"post",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(
+                {
+                    "id":id,
+                    "data":data
+                }
+            )
+        }).then(res=>{
+        
+        });
+    }
+
+
+    async function brakingattackCarinChain(id,data){
+        let url="http://localhost:8081/attack/braking/car/"+id;
+        let attackCarRequest=await fetch(url,{
+            method:"post",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(
+                {
+                    "id":id,
+                    "data":data
+                }
+            )
+        }).then(res=>{
+        
+        });
+    }
+
+
+    async function speedattackCarinChain(id,data){
+        let url="http://localhost:8081/attack/speed/car/"+id;
+        let attackCarRequest=await fetch(url,{
+            method:"post",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(
+                {
+                    "id":id,
+                    "data":data
+                }
+            )
+        }).then(res=>{
+        
+        });
+    }
+
 
