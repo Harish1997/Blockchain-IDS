@@ -1,0 +1,106 @@
+{
+    "chain": [
+        {
+            "index": 0,
+            "timestamp": "28/01/2019",
+            "data": "Speed_Limit:55,Braking_distance:10,Steering_Angle:0",
+            "previousHash": "0",
+            "hash": "93ddc6b82282b4748967ddd13111c025ed920064853d0e98e50c1a8a5bf03291"
+        },
+        {
+            "index": 1,
+            "timestamp": "03/24/2019",
+            "data": {
+                "Speed_Limit": 65,
+                "Braking_distance": 12,
+                "Steering_Angle": 6
+            },
+            "previousHash": "93ddc6b82282b4748967ddd13111c025ed920064853d0e98e50c1a8a5bf03291",
+            "hash": "79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd"
+        }
+    ],
+    "difficulty": 2,
+    "pendingTransactions": [],
+    "miningReward": 100
+}{
+    "chain": [
+        {
+            "index": 0,
+            "timestamp": "28/01/2019",
+            "data": "Speed_Limit:55,Braking_distance:10,Steering_Angle:0",
+            "previousHash": "0",
+            "hash": "93ddc6b82282b4748967ddd13111c025ed920064853d0e98e50c1a8a5bf03291"
+        },
+        {
+            "index": 1,
+            "timestamp": "03/24/2019",
+            "data": {
+                "Speed_Limit": 65,
+                "Braking_distance": 12,
+                "Steering_Angle": 6
+            },
+            "previousHash": "93ddc6b82282b4748967ddd13111c025ed920064853d0e98e50c1a8a5bf03291",
+            "hash": "79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd"
+        },
+        {
+            "index": 2,
+            "timestamp": "03/24/2019",
+            "data": {
+                "Speed_Limit": 58,
+                "Braking_distance": 14,
+                "Steering_Angle": 7
+            },
+            "previousHash": "79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd",
+            "hash": "6e8bb9cdd460f2b2f60e5631e6894af545c82ca816dc5ade2e4e1b25d3cccfa1"
+        }
+    ],
+    "difficulty": 2,
+    "pendingTransactions": [],
+    "miningReward": 100
+}{
+    "chain": [
+        {
+            "index": 0,
+            "timestamp": "28/01/2019",
+            "data": "Speed_Limit:55,Braking_distance:10,Steering_Angle:0",
+            "previousHash": "0",
+            "hash": "93ddc6b82282b4748967ddd13111c025ed920064853d0e98e50c1a8a5bf03291"
+        },
+        {
+            "index": 1,
+            "timestamp": "03/24/2019",
+            "data": {
+                "Speed_Limit": 65,
+                "Braking_distance": 12,
+                "Steering_Angle": 6
+            },
+            "previousHash": "93ddc6b82282b4748967ddd13111c025ed920064853d0e98e50c1a8a5bf03291",
+            "hash": "79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd"
+        },
+        {
+            "index": 2,
+            "timestamp": "03/24/2019",
+            "data": {
+                "Speed_Limit": 58,
+                "Braking_distance": 14,
+                "Steering_Angle": 7
+            },
+            "previousHash": "79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd",
+            "hash": "6e8bb9cdd460f2b2f60e5631e6894af545c82ca816dc5ade2e4e1b25d3cccfa1"
+        },
+        {
+            "index": 3,
+            "timestamp": "03/24/2019",
+            "data": {
+                "Speed_Limit": 50,
+                "Braking_distance": 8,
+                "Steering_Angle": 4
+            },
+            "previousHash": "6e8bb9cdd460f2b2f60e5631e6894af545c82ca816dc5ade2e4e1b25d3cccfa1",
+            "hash": "9790b2bf0535a0b663cbbb12d912cb6a524f8849ebe2b1a732e8b657549c6da9"
+        }
+    ],
+    "difficulty": 2,
+    "pendingTransactions": [],
+    "miningReward": 100
+}{"index":2,"timestamp":"03/24/2019","data":{"Speed_Limit":58,"Braking_distance":145,"Steering_Angle":7},"previousHash":"79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd","hash":"6e8bb9cdd460f2b2f60e5631e6894af545c82ca816dc5ade2e4e1b25d3cccfa1"}Is the blockchain valid? false{"index":2,"timestamp":"03/24/2019","data":{"Speed_Limit":58,"Braking_distance":145,"Steering_Angle":7},"previousHash":"79ffc6a7564af94139eb1c4eacdbeabedaf944abec1a018eaa271e06ad4c82dd","hash":"6e8bb9cdd460f2b2f60e5631e6894af545c82ca816dc5ade2e4e1b25d3cccfa1"}Is the blockchain valid? false

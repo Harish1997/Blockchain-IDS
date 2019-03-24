@@ -1,5 +1,6 @@
 const SHA256=require('crypto-js/sha256')
 
+
 //This reperesents the structure of a block or a node in the Blockchain
 class Block{
     constructor(index,timestamp,data,previousHash=''){
@@ -73,3 +74,4 @@ if (mm < 10) {
 today = mm + '/' + dd + '/' + yyyy;
 return today;
 }
+

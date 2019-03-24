@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser=require('body-parser');
+var fs = require('fs');
 
 var chainItems=require('./main.js'); 
 var getDateNow=require('./datefunc.js');
@@ -25,6 +26,15 @@ app.post('/attack/steering/car/:id',(req,res)=>{
     blocks.chain[attack_car_id].data.Steering_Angle=parseInt(attack_car_data);
     console.log(blocks.chain[attack_car_id]);
     console.log("Is the blockchain valid? " +blocks.isChainValid());
+    fs.appendFile('ledger.txt', JSON.stringify(blocks.chain[attack_car_id]), function (err) {
+        if (err) throw err;
+        console.log('Recorded in the ledger!');
+      });
+    
+      fs.appendFile('ledger.txt', "Is the blockchain valid? " +blocks.isChainValid(), function (err) {
+        if (err) throw err;
+        console.log('Recorded in the ledger!');
+      });
 });
 
 app.post('/attack/braking/car/:id',(req,res)=>{
@@ -33,6 +43,15 @@ app.post('/attack/braking/car/:id',(req,res)=>{
     blocks.chain[attack_car_id].data.Braking_distance=parseInt(attack_car_data);
     console.log(blocks.chain[attack_car_id]);
     console.log("Is the blockchain valid? " +blocks.isChainValid());
+    fs.appendFile('ledger.txt', JSON.stringify(blocks.chain[attack_car_id]), function (err) {
+        if (err) throw err;
+        console.log('Recorded in the ledger!');
+      });
+    
+      fs.appendFile('ledger.txt', "Is the blockchain valid? " +blocks.isChainValid(), function (err) {
+        if (err) throw err;
+        console.log('Recorded in the ledger!');
+      });
 });
 app.post('/attack/speed/car/:id',(req,res)=>{
     let attack_car_id=req.body.id;
@@ -40,6 +59,15 @@ app.post('/attack/speed/car/:id',(req,res)=>{
     blocks.chain[attack_car_id].data.Speed_Limit=parseInt(attack_car_data);
     console.log(blocks.chain[attack_car_id]);
     console.log("Is the blockchain valid? " +blocks.isChainValid());
+    fs.appendFile('ledger.txt', JSON.stringify(blocks.chain[attack_car_id]), function (err) {
+        if (err) throw err;
+        console.log('Recorded in the ledger!');
+      });
+    
+      fs.appendFile('ledger.txt', "Is the blockchain valid? " +blocks.isChainValid(), function (err) {
+        if (err) throw err;
+        console.log('Recorded in the ledger!');
+      });
 });
 
 app.post('/car/join',(req,res)=>{
@@ -82,6 +110,11 @@ console.log(JSON.stringify(blocks,null,4));
 console.log("Is the blockchain valid? " + blocks.isChainValid());
 
 console.log(Date.now());
+
+fs.appendFile('ledger.txt', JSON.stringify(blocks,null,4), function (err) {
+    if (err) throw err;
+    console.log('Recorded in the ledger!');
+  });
 }
 
 
